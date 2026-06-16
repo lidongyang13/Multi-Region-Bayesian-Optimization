@@ -22,7 +22,6 @@ CONFIG = {
     "n_init": 20,
     "n_iter": 20,
     "n_jobs": -1,
-    "seed": 1,
 }
 
 
@@ -67,7 +66,7 @@ if __name__ == "__main__":
     bounds = problem.bounds
 
     # Generate the initial design by Sobol sampling.
-    sobol = torch.quasirandom.SobolEngine(dimension=CONFIG["dim"], scramble=True, seed=CONFIG["seed"])
+    sobol = torch.quasirandom.SobolEngine(dimension=CONFIG["dim"], scramble=True)
     train_x = unnormalize(sobol.draw(CONFIG["n_init"]), bounds)
     train_y = problem(train_x).unsqueeze(-1)
 

@@ -1,0 +1,4 @@
+torch>=2.0
+botorch>=0.9
+gpytorch>=1.11
+scipy>=1.10

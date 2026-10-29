@@ -1,4 +1,4 @@
-# The Python code of MRBO-SPACE
+# The Python code of MRBO
 
 import warnings
 
